@@ -225,7 +225,9 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>{{ site.busuanzi_count.page_pv_footer }}
             </span>
           {% endif %} -->
+        {% if site.busuanzi_count.enable and site.busuanzi_count.page_pv and is_index == false or is_index == nil%}
         <span class="post-meta-divider">|</span>
+        {% endif %} -->
           {% if site.post_wordcount.wordcount or site.post_wordcount.min2read %}
             {% assign source = post.content %}
             {% include _helper/wordcount.html %}
